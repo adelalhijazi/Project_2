@@ -1,0 +1,50 @@
+﻿@model Education.Areas.Admin.ViewModels.MasterWhyChooseViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="pagetitle">
+    <h2>MasterWhyChoose</h2>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="MasterWhyChoose">MasterWhyChoose</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MasterWhyChooseId" />
+            <input type="hidden" asp-for="CreateUser" />
+            <input type="hidden" asp-for="CreateDate" />
+            <div class="form-group">
+                <label asp-for="MasterWhyChooseIcon" class="control-label"></label>
+                <input asp-for="MasterWhyChooseIcon" class="form-control" />
+                <span asp-validation-for="MasterWhyChooseIcon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterWhyChooseTitle" class="control-label"></label>
+                <input asp-for="MasterWhyChooseTitle" class="form-control" />
+                <span asp-validation-for="MasterWhyChooseTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterWhyChooseDescription" class="control-label"></label>
+                <textarea asp-for="MasterWhyChooseDescription" class="form-control"></textarea>
+                <span asp-validation-for="MasterWhyChooseDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" style="margin-left:295%" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-success" style="margin-left:91%">Back to List</a>
+</div>
+

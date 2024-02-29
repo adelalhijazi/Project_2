@@ -1,0 +1,43 @@
+﻿@model Education.Areas.Admin.ViewModels.MasterUsefullLinksViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="pagetitle">
+    <h2>MasterUsefullLinks</h2>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="MasterUsefullLinks">MasterUsefullLinks</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="MasterUsefullLinksId" class="form-control" type="hidden" value="0" />
+            <div class="form-group">
+                <label asp-for="MasterUsefullLinksName" class="control-label"></label>
+                <input asp-for="MasterUsefullLinksName" class="form-control" />
+                <span asp-validation-for="MasterUsefullLinksName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterUsefullLinksUrl" class="control-label"></label>
+                <input asp-for="MasterUsefullLinksUrl" class="form-control" />
+                <span asp-validation-for="MasterUsefullLinksUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" style="margin-left:295%" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-success" style="margin-left:91%">Back to List</a>
+</div>
+
